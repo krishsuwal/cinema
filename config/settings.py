@@ -135,10 +135,12 @@ RESERVATION_WINDOW_TIME = 5 # minutes
 
 LOGIN_URL = 'login'
 
-# --- Khalti payments ---------------------------------------------------
-# Only the secret key is needed. Leave KHALTI_LIVE unset/False for the sandbox.
-KHALTI_API_SECRET_KEY = config("KHALTI_API_SECRET_KEY", default="")
-KHALTI_LIVE = config("KHALTI_LIVE", default=False, cast=bool)
+# Khalti Payment Configuration
+
+KHALTI_API_SECRET_KEY = "18befe91dd0a48919453e8709955f4fc"
+
+KHALTI_LIVE = False
+
 KHALTI_BASE_URL = (
     "https://khalti.com/api/v2/epayment/"
     if KHALTI_LIVE
